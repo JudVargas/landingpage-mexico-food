@@ -250,7 +250,15 @@ El sitio incluye navegación suave (smooth scroll) a secciones:
 - **Fonts**: Cargadas desde Google Fonts CDN
 - **Build**: Optimizado con code-splitting automático
 
+## 🔧 Próximas Mejoras Sugeridas
 
+- [ ] Integrar backend para formulario de contacto
+- [ ] Agregar galería de imágenes de productos reales
+- [ ] Implementar sistema de carrito de compras
+- [ ] Agregar testimonios de clientes
+- [ ] Sistema de autenticación para mayoristas
+- [ ] Panel de administración de productos
+- [ ] Blog de recetas con chiles
 
 ## 🤝 Soporte
 

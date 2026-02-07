@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- Fondo circular -->
+  <circle cx="100" cy="100" r="100" fill="#D32F2F"/>
+  
+  <!-- Circulo de borde interno para elegancia -->
+  <circle cx="100" cy="100" r="95" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="2"/>
+  
+  <!-- Chile estilizado -->
+  <g transform="translate(100, 100)">
+    <!-- Cuerpo del chile -->
+    <path d="M 0 -40 Q 15 -30 20 -5 Q 22 10 18 25 Q 12 40 0 45 Q -12 40 -18 25 Q -22 10 -20 -5 Q -15 -30 0 -40" 
+          fill="#FFD700" stroke="#F57C00" stroke-width="2"/>
+    
+    <!-- Brillo del chile -->
+    <ellipse cx="-8" cy="-15" rx="6" ry="12" fill="rgba(255,255,255,0.3)"/>
+    
+    <!-- Tallo del chile -->
+    <path d="M 0 -42 Q -2 -55 0 -65" stroke="#2E7D32" stroke-width="3" fill="none" stroke-linecap="round"/>
+    
+    <!-- Hoja pequeña -->
+    <ellipse cx="8" cy="-58" rx="5" ry="8" fill="#2E7D32" transform="rotate(-30 8 -58)"/>
+  </g>
+  
+  <!-- Decoración de circulo exterior -->
+  <circle cx="100" cy="100" r="100" fill="none" stroke="#FFD700" stroke-width="1" opacity="0.5" stroke-dasharray="5,5"/>
+</svg>

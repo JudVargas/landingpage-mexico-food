@@ -5,7 +5,7 @@ function Header() {
     <header className="header">
       <nav className="navbar">
         <div className="logo">
-          <span className="logo-icon">🌶️</span>
+          <img src="/img/logo.png" alt="Chile México Premium Logo" className="logo-img" />
           <h1>Chile México Premium</h1>
         </div>
         <ul className="nav-links">

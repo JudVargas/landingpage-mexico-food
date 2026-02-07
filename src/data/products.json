@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "name": "Chile Ancho",
+    "description": "Chile poblano seco, dulce y aromático. Ideal para moles y adobos.",
+    "weight": "100g - 500g",
+    "price": "$45,000 COP",
+    "scoville": "1,000 - 2,000 SHU",
+    "image": "../img/chile-ancho.png",
+    "featured": true
+  },
+  {
+    "id": 2,
+    "name": "Chile Guajillo",
+    "description": "Sabor dulce y ligeramente picante. Perfecto para salsas y caldos.",
+    "weight": "100g - 500g",
+    "price": "$38,000 COP",
+    "scoville": "2,500 - 5,000 SHU",
+    "image": "../img/chile-guajillo.png",
+    "featured": true
+  },
+  {
+    "id": 3,
+    "name": "Chile Chipotle Meco",
+    "description": "Jalapeño ahumado con sabor intenso. Esencial para marinados.",
+    "weight": "100g - 500g",
+    "price": "$52,000 COP",
+    "scoville": "5,000 - 10,000 SHU",
+    "image": "../img/chile-chipotle.png",
+    "featured": false
+  },
+  {
+    "id": 4,
+    "name": "Chile de Árbol",
+    "description": "Picante intenso y brillante. Para salsas picantes y aceites.",
+    "weight": "100g - 500g",
+    "price": "$48,000 COP",
+    "scoville": "15,000 - 30,000 SHU",
+    "image": "../img/chile-arbol.png",
+    "featured": false
+  },
+  {
+    "id": 5,
+    "name": "Chile Pasilla",
+    "description": "Chilaca seco con notas de chocolate. Ideal para moles oscuros.",
+    "weight": "100g - 500g",
+    "price": "$42,000 COP",
+    "scoville": "1,000 - 2,500 SHU",
+    "image": "../img/chile-pasilla.png",
+    "featured": false
+  },
+  {
+    "id": 6,
+    "name": "Chile Cascabel",
+    "description": "Sabor a nuez con picor moderado. Versátil para múltiples platillos.",
+    "weight": "100g - 500g",
+    "price": "$40,000 COP",
+    "scoville": "1,500 - 2,500 SHU",
+    "image": "../img/chile-cascabel.png",
+    "featured": false
+  }
+]

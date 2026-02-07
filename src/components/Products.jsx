@@ -1,62 +1,8 @@
 import './Products.css'
+import productsData from '../data/products.json'
 
-function Products() {
-  const products = [
-    {
-      id: 1,
-      name: 'Chile Ancho',
-      description: 'Chile poblano seco, dulce y aromático. Ideal para moles y adobos.',
-      weight: '100g - 500g',
-      scoville: '1,000 - 2,000 SHU',
-      emoji: '🌶️',
-      featured: true
-    },
-    {
-      id: 2,
-      name: 'Chile Guajillo',
-      description: 'Sabor dulce y ligeramente picante. Perfecto para salsas y caldos.',
-      weight: '100g - 500g',
-      scoville: '2,500 - 5,000 SHU',
-      emoji: '🌶️',
-      featured: true
-    },
-    {
-      id: 3,
-      name: 'Chile Chipotle Meco',
-      description: 'Jalapeño ahumado con sabor intenso. Esencial para marinados.',
-      weight: '100g - 500g',
-      scoville: '5,000 - 10,000 SHU',
-      emoji: '🌶️',
-      featured: false
-    },
-    {
-      id: 4,
-      name: 'Chile de Árbol',
-      description: 'Picante intenso y brillante. Para salsas picantes y aceites.',
-      weight: '100g - 500g',
-      scoville: '15,000 - 30,000 SHU',
-      emoji: '🌶️',
-      featured: false
-    },
-    {
-      id: 5,
-      name: 'Chile Pasilla',
-      description: 'Chilaca seco con notas de chocolate. Ideal para moles oscuros.',
-      weight: '100g - 500g',
-      scoville: '1,000 - 2,500 SHU',
-      emoji: '🌶️',
-      featured: false
-    },
-    {
-      id: 6,
-      name: 'Chile Cascabel',
-      description: 'Sabor a nuez con picor moderado. Versátil para múltiples platillos.',
-      weight: '100g - 500g',
-      scoville: '1,500 - 2,500 SHU',
-      emoji: '🌶️',
-      featured: false
-    }
-  ]
+function Products({ onAddToCart }) {
+  const products = productsData
 
   return (
     <section id="productos" className="products-section">
@@ -68,7 +14,9 @@ function Products() {
         {products.map(product => (
           <div key={product.id} className={`product-card ${product.featured ? 'featured' : ''}`}>
             {product.featured && <span className="badge">Más Popular</span>}
-            <div className="product-emoji">{product.emoji}</div>
+            <div className="product-image">
+              <img src={product.image} alt={product.name} loading="lazy" />
+            </div>
             <h3>{product.name}</h3>
             <p className="product-description">{product.description}</p>
             <div className="product-details">
@@ -80,6 +28,21 @@ function Products() {
                 <span className="detail-label">Picor:</span>
                 <span className="detail-value">{product.scoville}</span>
               </div>
+            </div>
+            <div className="product-footer">
+              <div className="product-price">
+                <span>{product.price}</span>
+              </div>
+              <button 
+                className="add-to-cart-btn"
+                onClick={() => {
+                  console.log('Producto agregado:', product)
+                  onAddToCart(product)
+                }}
+                title="Agregar al carrito"
+              >
+                🛒 Agregar
+              </button>
             </div>
           </div>
         ))}

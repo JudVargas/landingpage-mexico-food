@@ -1,6 +1,6 @@
 import './WhatsAppButton.css'
 
-function WhatsAppButton() {
+function WhatsAppButton({ isCartOpen }) {
   // Número de WhatsApp Colombia (código país 57 + número celular)
   const phoneNumber = '573104567890' // Formato: 57 + 10 dígitos sin espacios
   const message = encodeURIComponent('Hola, me gustaría conocer más sobre sus chiles mexicanos premium.')
@@ -9,7 +9,7 @@ function WhatsAppButton() {
   return (
     <a 
       href={whatsappUrl}
-      className="whatsapp-button"
+      className={`whatsapp-button ${isCartOpen ? 'hidden' : ''}`}
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Contactar por WhatsApp"
