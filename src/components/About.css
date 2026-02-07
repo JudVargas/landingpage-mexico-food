@@ -1,0 +1,80 @@
+.about-section {
+  background-color: var(--gray-light);
+}
+
+.about-content {
+  display: grid;
+  gap: 50px;
+}
+
+.about-text {
+  line-height: 1.8;
+}
+
+.about-text h3 {
+  color: var(--primary-color);
+  margin-top: 35px;
+  margin-bottom: 18px;
+  font-size: 1.6rem;
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+}
+
+.about-text h3:first-of-type {
+  margin-top: 0;
+}
+
+.about-text p {
+  color: var(--gray-color);
+  margin-bottom: 20px;
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.about-values {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.value-card {
+  background: white;
+  padding: 35px;
+  border-radius: 16px;
+  text-align: center;
+  transition: all 0.3s;
+  border: 1px solid #e0e0e0;
+}
+
+.value-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+  border-color: var(--primary-color);
+}
+
+.value-icon {
+  font-size: 3.5rem;
+  display: block;
+  margin-bottom: 18px;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+}
+
+.value-card h4 {
+  color: var(--dark-color);
+  margin-bottom: 12px;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.value-card p {
+  color: var(--gray-color);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .about-values {
+    grid-template-columns: 1fr;
+  }
+}
