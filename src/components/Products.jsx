@@ -1,8 +1,15 @@
+import { useState } from 'react'
 import './Products.css'
 import productsData from '../data/products.json'
 
 function Products({ onAddToCart }) {
-  const products = productsData
+  const [selectedCategory, setSelectedCategory] = useState('Todos')
+  
+  const categories = ['Todos', 'Dulce', 'Picante', 'Ahumado']
+  
+  const filteredProducts = selectedCategory === 'Todos' 
+    ? productsData 
+    : productsData.filter(product => product.category === selectedCategory)
 
   return (
     <section id="productos" className="products-section">
@@ -10,8 +17,29 @@ function Products({ onAddToCart }) {
       <p className="section-subtitle">
         Chiles secos mexicanos de la más alta calidad, importados directamente para usted
       </p>
+      
+      {/* Filtro de categoría con dropdown */}
+      <div className="category-filter-wrapper">
+        <label htmlFor="category-filter" className="filter-label">
+          <span className="filter-icon">🌶️</span>
+          Filtrar por categoría:
+        </label>
+        <select 
+          id="category-filter"
+          className="category-select"
+          value={selectedCategory}
+          onChange={(e) => setSelectedCategory(e.target.value)}
+        >
+          {categories.map(category => (
+            <option key={category} value={category}>
+              {category === 'Todos' ? 'Todos los chiles' : `Chile ${category}`}
+            </option>
+          ))}
+        </select>
+      </div>
+
       <div className="products-grid">
-        {products.map(product => (
+        {filteredProducts.map(product => (
           <div key={product.id} className={`product-card ${product.featured ? 'featured' : ''}`}>
             {product.featured && <span className="badge">Más Popular</span>}
             <div className="product-image">

@@ -21,7 +21,7 @@
 
 @keyframes cartPulse {
   0%, 100% {
-    box-shadow: 0 4px 12px rgba(211, 47, 47, 0.25);
+    box-shadow: 0 4px 12px rgba(211, 186, 47, 0.25);
   }
   50% {
     box-shadow: 0 4px 12px rgba(211, 47, 47, 0.4), 0 0 0 10px rgba(211, 47, 47, 0.1);
